@@ -5,7 +5,7 @@ import { AuthModule } from './auth/auth.module';
 @Module({
   imports: [
     UsuarioModule,
-    AuthModule, // Add the Auth module for authentication endpoints
+    AuthModule,
   ],
   controllers: [],
   providers: [],

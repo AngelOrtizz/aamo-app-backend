@@ -7,14 +7,17 @@ import {
   Param, 
   Delete,
   HttpException,
-  HttpStatus 
+  HttpStatus,
+  UseGuards
 } from '@nestjs/common';
 import { UsuarioService } from '../modules/usuario/usuario.service';
 import { CreateUsuarioDto } from '../modules/usuario/dto/create-usuario.dto';
 import { UpdateUsuarioDto } from '../modules/usuario/dto/update-usuario.dto';
 import { UtilsService } from '../shared/service/utils.service';
+import { AuthGuard } from '../shared/guard/auth/auth.guard';
 
 @Controller('usuarios')
+@UseGuards(AuthGuard)
 export class UsuarioController {
   constructor(
     private readonly usuarioService: UsuarioService,

@@ -15,5 +15,6 @@ import { jwtConstants } from '../../constants/jwt.contants';
   ],
   controllers: [UsuarioController],
   providers: [UsuarioService, PrismaService, UtilsService],
+  exports: [UsuarioService], // Export for use in other modules
 })
 export class UsuarioModule {}
